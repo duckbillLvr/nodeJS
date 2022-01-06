@@ -1,0 +1,46 @@
+Chapter 1
+
+Node js 의 비동기성
+
+event roop를 이용하여 동작하므로 IO를 비동기적으로 운영할 수 있다.
+
+저수준 처리의 개선(Offloading)
+
+ㄴ 저수준의 오래 걸리는 일은 Node에게 고수준의 로직은 메인 스레드에서.
+
+ㄴ C와 Webassembly 모듈을 바인딩해 사용.
+
+방대한 오픈 소스 생태계 - npm
+
+glitch를 이용한 간단한 서버 구현 테스트
+
+유용한 패키지
+Formatting : Prettier
+Linting : ESLint
+node npm을 이용하여 prettier extention설치
+npm install --save-dev prettier
+.prettierrc 파일 생성
+.vscode 로컬 폴더 생성
+ㄴ settings.json 파일 생성
+
+npm install --save-dev eslint
+ㄴeslint 설치
+npm install --save-dev eslint-config-airbnb-base
+npm install --save-dav eslint-plugin-import
+ㄴeslint package 설치
+
+충돌 방지 패키지
+npm install --save-dev eslint-config-prettier
+eslintrc.js파일 생성
+eslint 특정 조건 비활성화
+
+node 전용 plugin
+npm install --save-dev eslint-plugin-node
+
+Type Checking
+미리 타입 에러 변수를 체크
+npm install --save-dev typescript
+맨위에 // @ts-check 삽입
+
+typescript가 node에서 활용하기 위한 패키지
+npm install --save--dev @types/node
