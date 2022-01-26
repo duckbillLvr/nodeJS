@@ -2,5 +2,5 @@
   "compilerOptions": {
     "strict": true
   },
-  "include": ["src/**/*"]
+  "include": ["ch01/**/*", "ch02/**/*", "ch03/**/*", "src/**/*"]
 }
