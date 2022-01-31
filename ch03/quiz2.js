@@ -2,7 +2,7 @@
 // 실행 1
 // setInterval(() => {
 //   console.log('Hey!')
-//   while (true) {}
+//   while (true) {} // event loop의 block
 // }, 1000)
 // 리턴이 되지 않으 므로 한번만 실행
 
@@ -13,6 +13,6 @@ setInterval(() => {
   console.log('Hey!')
   while (i !== 5) {
     console.log(i)
-    i+=1;
+    i += 1
   }
 }, 1000)

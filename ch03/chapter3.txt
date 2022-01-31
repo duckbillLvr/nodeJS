@@ -17,3 +17,12 @@ call stack이 완전히 빌 때까지 처리한다
 Callback queue FIFO
 callback queue(메시지 큐)는 앞으로 실행할 콜백들을 쌓아두는 큐
 
+// 여기서 Node에게 파일을 읽어달라고 요청하고, NOTE:워커 스레드에서 파일을 읽는다.
+fs.readFile(fileName, (err, data)=>{
+    Node가 파일을 읽고 나면
+    1. callback queue에 이 함수의 err, data 인자를 넣고
+    3. callback queue가 꺼내질 때 이 부분이 실행된다.
+})
+someTask();
+워커 스레드에게 오래 걸리는 일을 대신 실행하도록 한다.
+메인스레드와 이벤트 루프틑 영향을 받지 않고 계속 동작한다. 이를 offloading이라고 한다.
